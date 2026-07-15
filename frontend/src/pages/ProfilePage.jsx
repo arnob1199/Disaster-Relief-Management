@@ -1,0 +1,4 @@
+import { useAuth } from '../context/AuthContext';
+import PageHeader from '../components/common/PageHeader';
+
+export default function ProfilePage() { const { user } = useAuth(); return <><PageHeader title="Profile" description="Your signed-in account information." /><div className="card border-0 shadow-sm profile-card"><div className="card-body p-4"><div className="profile-avatar">{user?.full_name?.slice(0, 1).toUpperCase()}</div><h2 className="h4 mt-3">{user?.full_name}</h2><span className="badge text-bg-primary text-capitalize">{user?.role}</span><hr /><dl className="row mb-0"><dt className="col-sm-3">Email</dt><dd className="col-sm-9">{user?.email}</dd><dt className="col-sm-3">Phone</dt><dd className="col-sm-9">{user?.phone || '—'}</dd><dt className="col-sm-3">Address</dt><dd className="col-sm-9">{user?.address || '—'}</dd></dl></div></div></>; }

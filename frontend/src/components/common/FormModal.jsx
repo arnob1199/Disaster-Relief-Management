@@ -1,0 +1,4 @@
+export default function FormModal({ show, title, children, onClose, onSubmit, submitting, submitLabel = 'Save' }) {
+  if (!show) return null;
+  return <div className="modal-backdrop-custom"><div className="modal d-block" tabIndex="-1"><div className="modal-dialog modal-lg modal-dialog-centered"><form className="modal-content shadow" onSubmit={onSubmit}><div className="modal-header"><h5 className="modal-title">{title}</h5><button type="button" className="btn-close" onClick={onClose} disabled={submitting} /></div><div className="modal-body">{children}</div><div className="modal-footer"><button type="button" className="btn btn-light" onClick={onClose} disabled={submitting}>Cancel</button><button className="btn btn-primary" disabled={submitting}>{submitting ? 'Saving...' : submitLabel}</button></div></form></div></div></div>;
+}
