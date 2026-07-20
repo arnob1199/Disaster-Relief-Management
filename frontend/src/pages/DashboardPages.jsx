@@ -4,7 +4,7 @@ import MetricCard from '../components/common/MetricCard';
 import PageHeader from '../components/common/PageHeader';
 import { api, getErrorMessage } from '../services/api';
 
-const adminMetrics = [['Total Users', 'total_users', 'primary'], ['Total Victims', 'total_victims', 'info'], ['Total Shelters', 'total_shelters', 'success'], ['Supply Types', 'total_supplies', 'secondary'], ['Pending Requests', 'pending_requests', 'warning'], ['Approved Requests', 'approved_requests', 'primary'], ['Completed Requests', 'completed_requests', 'success'], ['Total Distributions', 'total_distributions', 'info'], ['Low Stock Supplies', 'low_stock_supplies', 'danger']];
+const adminMetrics = [['Total Users', 'total_users', 'primary'], ['Total Victims', 'total_victims', 'info'], ['Total Shelters', 'total_shelters', 'success'], ['Supply Types', 'total_supplies', 'secondary'], ['Pending Requests', 'pending_requests', 'warning'], ['Approved Requests', 'approved_requests', 'primary'], ['Completed Requests', 'completed_requests', 'success'], ['Low Stock Supplies', 'low_stock_supplies', 'danger']];
 const victimMetrics = [['My Requests', 'my_requests', 'primary'], ['Pending Requests', 'pending_requests', 'warning'], ['Approved Requests', 'approved_requests', 'primary'], ['Completed Requests', 'completed_requests', 'success']];
 
 function Dashboard({ admin }) {

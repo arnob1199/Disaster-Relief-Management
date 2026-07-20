@@ -10,9 +10,8 @@ const getAdminDashboard = async () => {
        (SELECT COUNT(*) FROM relief_requests WHERE status = ?) AS pending_requests,
        (SELECT COUNT(*) FROM relief_requests WHERE status = ?) AS approved_requests,
        (SELECT COUNT(*) FROM relief_requests WHERE status = ?) AS completed_requests,
-       (SELECT COUNT(*) FROM distributions) AS total_distributions,
        (SELECT COUNT(*) FROM supplies WHERE quantity < ?) AS low_stock_supplies`,
-    ['victim', 'Pending', 'Approved', 'Completed', 20]
+    ['victim', 'Pending', 'Approved', 'Distributed', 20]
   );
 
   return rows[0];
